@@ -1,0 +1,9 @@
+{
+  "geode": "4.0.0",
+  "gd": "*",
+  "id": "romanrms0301.phone-bot-mod",
+  "name": "Phone Bot Mod",
+  "version": "v1.0.0",
+  "developer": "romanrms0301",
+  "description": "Un bot de celular dentro de GD"
+}
