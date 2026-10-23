@@ -1,19 +1,10 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PlayLayer.hpp>
-
 using namespace geode::prelude;
-
 class $modify(MyPlayLayer, PlayLayer) {
-    bool init(GJGameLevel* level, bool useReplay, bool dontCreateObjects) {
-        if (!PlayLayer::init(level, useReplay, dontCreateObjects)) {
-            return false;
-        }
-
-        // Tu bot de teléfono - solo un ejemplo que no crashea
-        // Aquí puedes poner tu código de clickbot después
-        
+    bool init(GJGameLevel* l, bool p1, bool p2) {
+        if (!PlayLayer::init(l, p1, p2)) return false;
         log::info("Phone Bot Mod Loaded!");
-        
         return true;
     }
 };
