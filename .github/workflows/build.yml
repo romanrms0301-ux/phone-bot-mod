@@ -1,4 +1,4 @@
-namename: Build Geode Mod
+name: Build Geode Mod
 
 on:
   push:
@@ -21,18 +21,18 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - uses: geode-sdk/build-geode-mod@main
-        id: build
+
+      - name: Build Mod
+        uses: geode-sdk/build-geode-mod@main
         with:
           target: ${{ matrix.config.target }}
-          combine: true
           cli: nightly
           sdk: nightly
 
   package:
     runs-on: ubuntu-latest
     needs: ['build']
-    name: Package Mod
+    name: Package
     steps:
       - uses: geode-sdk/build-geode-mod/combine@main
         id: build
