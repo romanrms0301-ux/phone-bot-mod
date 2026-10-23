@@ -1,11 +1,23 @@
 {
-  "geode": "3.0.0",
-  "gd": "2.206",
-  "id": "romanrms0301-ux.phone-bot-mod",
-  "name": "Phone Bot Mod",
+  "geode": "3.8.1",
+  "gd": "2.2074",
+  "id": "romanrms.phone-bot",
+  "name": "Phone Bot",
   "version": "v1.0.0",
-  "developer": "romanrms0301-ux",
-  "description": "Bot for phone",
-  "dependencies": [],
-  "resources": {}
+  "developer": "romanrms",
+  "description": "Bot con menu para Realme C61 - Android 16",
+  "settings": {
+    "bot-enabled": {
+      "name": "Activar Bot",
+      "description": "Prende o apaga el bot",
+      "type": "bool",
+      "default": false
+    },
+    "auto-jump": {
+      "name": "Auto Jump",
+      "description": "Salta automaticamente",
+      "type": "bool",
+      "default": true
+    }
+  }
 }
