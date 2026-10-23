@@ -5,19 +5,13 @@
   "name": "Phone Bot",
   "version": "v1.0.0",
   "developer": "romanrms",
-  "description": "Bot con menu para Realme C61 - Android 16",
+  "description": "Bot con menu para Realme C61",
   "settings": {
     "bot-enabled": {
       "name": "Activar Bot",
-      "description": "Prende o apaga el bot",
+      "description": "Prende o apaga",
       "type": "bool",
       "default": false
-    },
-    "auto-jump": {
-      "name": "Auto Jump",
-      "description": "Salta automaticamente",
-      "type": "bool",
-      "default": true
     }
   }
 }
