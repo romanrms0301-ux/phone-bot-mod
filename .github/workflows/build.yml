@@ -1,30 +1,44 @@
-name: Build Geode Mod
+namename: Build Geode Mod
+
 on:
   push:
-    branches: [main]
   workflow_dispatch:
+
 jobs:
   build:
     strategy:
       fail-fast: false
       matrix:
         config:
-        - name: Windows
-          os: windows-latest
-          target: Win64
-        - name: Android64
-          os: ubuntu-latest
-          target: Android64
+          - name: "Windows"
+            os: windows-latest
+          - name: "Android64"
+            os: ubuntu-latest
+            target: Android64
+
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
+
     steps:
       - uses: actions/checkout@v4
-      - name: Build Geode Mod
-        uses: geode-sdk/build-geode-mod@main
+      - uses: geode-sdk/build-geode-mod@main
+        id: build
         with:
           target: ${{ matrix.config.target }}
           combine: true
+          cli: nightly
+          sdk: nightly
+
+  package:
+    runs-on: ubuntu-latest
+    needs: ['build']
+    name: Package Mod
+    steps:
+      - uses: geode-sdk/build-geode-mod/combine@main
+        id: build
+        with:
+          cli: nightly
       - uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.config.target }}
-          path: ./**/*.geode
+          name: phone-bot-mod
+          path: ${{ steps.build.outputs.build-output }}
