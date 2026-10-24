@@ -11,12 +11,20 @@
   "version": "v1.0.0",
   "developer": "romanrms",
   "description": "Bot con menu para Realme C61",
-  "dependencies": {
-    "geode.node-ids": {
-      "version": ">=v1.23.3",
-      "importance": "required"
-    }
-  },
+"dependencies": {
+  "geode.node-ids": {
+    "version": ">=v1.23.3",
+    "importance": "required"
+  }
+},
+"settings": {
+  "bot-enabled": {
+    "name": "Activar Bot",
+    "description": "Prende o apaga",
+    "type": "bool",
+    "default": false
+  }
+}
   "settings": {
     "bot-enabled": {
       "name": "Activar Bot",
