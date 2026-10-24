@@ -11,6 +11,11 @@ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 project(PhoneBot VERSION 1.0.0)
 
+# Android NDK / Clang can choke on fmt's consteval FMT_STRING implementation
+# in some Geode dependency versions. Disable the compile-time format-string mode
+# so the transitive fmt dependency builds correctly on Android.
+add_compile_definitions(FMT_USE_CONSTEXPR=0)
+
 # Add all source files inside src (recursively)
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 
