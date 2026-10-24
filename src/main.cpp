@@ -1,9 +1,15 @@
 #include <Geode/Geode.hpp>
+#include "BotController.hpp"
+
 using namespace geode::prelude;
 
 $on_mod(Loaded) {
-    const bool enabled = Mod::get()->getSettingValue<bool>("bot-enabled");
+    BotController::logState();
 
-    log::info("Phone Bot cargado correctamente");
-    log::info("Estado del bot: {}", enabled ? "activado" : "desactivado");
+    if (!BotController::isEnabled()) {
+        log::info("Phone Bot cargado, pero permanece desactivado por la configuración.");
+        return;
+    }
+
+    log::info("Phone Bot cargado correctamente y activo");
 }
