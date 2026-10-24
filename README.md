@@ -1,23 +1,25 @@
-# Template
-This is where she makes a mod.
+# Phone Bot
 
-<img src="logo.png" width="150" alt="the mod's logo" />
+Mod de Geode para la gama Realme C61 con un bot configurable desde la interfaz del juego.
 
-*Update logo.png to change your mod's icon (please)*
+## Requisitos
 
-## Getting started
-We recommend heading over to [the getting started section on our docs](https://docs.geode-sdk.org/getting-started/) for useful info on what to do next.
+- Geode SDK
+- Geode CLI
+- CMake 3.21 o superior
 
-## Build instructions
-For more info, see [our docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
+## Compilar
+
 ```sh
-# Assuming you have the Geode CLI set up already
 geode build
 ```
 
-# Resources
-* [Geode SDK Documentation](https://docs.geode-sdk.org/)
-* [Geode SDK Source Code](https://github.com/geode-sdk/geode/)
-* [Geode CLI](https://github.com/geode-sdk/cli)
-* [Bindings](https://github.com/geode-sdk/bindings/)
-* [Dev Tools](https://github.com/geode-sdk/DevTools)
+## Descripción
+
+Este proyecto está pensado como un prototipo de mod con la base mínima necesaria para funcionar en Geode. Actualmente carga el mod y lee la opción `bot-enabled` desde `mod.json`.
+
+## Recursos
+
+- https://docs.geode-sdk.org/
+- https://docs.geode-sdk.org/getting-started/
+- https://github.com/geode-sdk/geode/

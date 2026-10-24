@@ -2,5 +2,8 @@
 using namespace geode::prelude;
 
 $on_mod(Loaded) {
-    log::info("Phone Bot cargado para Realme C61");
+    const bool enabled = Mod::get()->getSettingValue<bool>("bot-enabled");
+
+    log::info("Phone Bot cargado correctamente");
+    log::info("Estado del bot: {}", enabled ? "activado" : "desactivado");
 }
