@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build Geode Mod
         uses: geode-sdk/build-geode-mod@main
-        with:
+        with: background: 
           background: false
           platform: ${{ matrix.config.platform }}
           combine: false
