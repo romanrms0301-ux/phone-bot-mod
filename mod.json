@@ -11,8 +11,8 @@
   "version": "v1.0.0",
   "developer": "romanrms",
   "description": "Bot con menu para Realme C61",
-    "geode.node-ids": {
-      "version": ">=v1.23.3",
-      "importance": "required"
-    }
+  "geode.node-ids": {
+    "version": ">=v1.23.3",
+    "importance": "required"
   }
+}
