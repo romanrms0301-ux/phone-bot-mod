@@ -1,11 +1,23 @@
 #include "BotController.hpp"
 
+using namespace geode::prelude;
+
 bool BotController::isEnabled() {
-    return Mod::get()->getSettingValue<bool>("bot-enabled");
+    auto mod = Mod::get();
+    if (!mod) {
+        return false;
+    }
+
+    return mod->getSettingValue<bool>("bot-enabled");
 }
 
 void BotController::setEnabled(bool enabled) {
-    Mod::get()->setSettingValue("bot-enabled", enabled);
+    auto mod = Mod::get();
+    if (!mod) {
+        return;
+    }
+
+    mod->setSettingValue("bot-enabled", enabled);
 }
 
 void BotController::logState() {
