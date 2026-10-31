@@ -3,17 +3,22 @@
 using namespace geode::prelude;
 
 bool BotController::isEnabled() {
-    if (const auto mod = Mod::get(); mod) {
-        return mod->getSettingValue<bool>("bot-enabled", false);
+    const auto mod = Mod::get();
+    if (!mod) {
+        return false;
     }
 
-    return false;
+    return mod->getSettingValue<bool>("bot-enabled", false);
 }
 
 void BotController::setEnabled(bool enabled) {
-    if (const auto mod = Mod::get(); mod) {
-        mod->setSettingValue("bot-enabled", enabled);
+    const auto mod = Mod::get();
+    if (!mod) {
+        log::warn("Phone Bot: Mod no disponible, no se puede guardar la configuración.");
+        return;
     }
+
+    mod->setSettingValue("bot-enabled", enabled);
 }
 
 void BotController::logState() {
