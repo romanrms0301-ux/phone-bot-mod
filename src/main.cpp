@@ -1,15 +1,18 @@
-#include <Geode/Geode.hpp>
-#include "BotController.hpp"
+bool BotController::isEnabled() {
+    const auto mod = Mod::get();
+    if (!mod) {
+        return false;
+    }
 
-using namespace geode::prelude;
+    return mod->getSettingValue<bool>("bot-enabled", false);
+}
 
-$on_mod(Loaded) {
-    BotController::logState();
-
-    if (!BotController::isEnabled()) {
-        log::info("Phone Bot cargado, pero permanece desactivado por la configuración.");
+void BotController::setEnabled(bool enabled) {
+    const auto mod = Mod::get();
+    if (!mod) {
+        log::warn("Phone Bot: Mod no disponible, no se puede guardar la configuración.");
         return;
     }
 
-    log::info("Phone Bot cargado correctamente y activo");
+    mod->setSettingValue("bot-enabled", enabled);
 }
