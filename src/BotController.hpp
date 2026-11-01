@@ -1,4 +1,3 @@
-pragma once
 include "BotController.hpp"
 
 #include <Geode/Geode.hpp>
