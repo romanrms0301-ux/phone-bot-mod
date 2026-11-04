@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    github: ${{ matrix.config.name }}
+    name: ${{ matrix.config.name }}
     strategy:
       fail-fast: false
       matrix:
