@@ -1,22 +1,35 @@
 name: Build
+
 on:
   push:
   pull_request:
+
 jobs:
   build:
     strategy:
       fail-fast: false
       matrix:
         config:
-          - name: Android64
-            platform: android64
+          - name: Android 32-bit
+            target: Android32
+          - name: Android 64-bit
+            target: Android64
+
     runs-on: ubuntu-latest
-    name: ${{ matrix.config.name }}
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Build Geode Mod
         uses: geode-sdk/build-geode-mod@main
-        with: background: 
-          background: false
-          platform: ${{ matrix.config.platform }}
-          combine: false
+        id: build
+        with:
+          target: ${{ matrix.config.target }}
+          combine: true
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: geode-mod-${{ matrix.config.target }}
+          path: ${{ steps.build.outputs.build-output }}
+          
