@@ -1,10 +1,14 @@
 {
-  "geode": "v3.0.0",
-  "id": "phone-bot-mod",
-  "name": "Phone Bot Mod",
-  "version": "v1.0.0",
-  "developer": "romanrmm04",
-  "description": "Bot con menú para teléfonos",
-  "dependencies": [],
-  "incompatibilities": []
-}
+    "geode": "v3.0.0",
+      "id": "romanrmm04.phone-bot-mod",
+        "name": "Phone Bot Mod",
+          "version": "v1.0.0",
+            "developer": "romanrmm04",
+              "description": "Bot con menú para Realme C61",
+                "dependencies": [],
+                  "incompatibilities": []
+                  }
+                  
+
+
+                                               
