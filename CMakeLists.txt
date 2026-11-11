@@ -38,4 +38,4 @@ if (TARGET fmt)
 endif()
 
 # Set up dependencies, resources, and link Geode.
-setup_geode_mod(${phone bot mod})
+setup_geode_mod(${PROJECT_NAME})
