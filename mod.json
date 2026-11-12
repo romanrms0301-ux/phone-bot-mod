@@ -1,8 +1,11 @@
 {
-  "geode": "3.0.0",
+  "geode": "6.0.0-alpha.1",
+  "gd": {
+    "android": "2.2091"
+  },
   "id": "romanrmm04.phone-bot-mod",
   "name": "Phone Bot Mod",
-  "version": "v1.0.0",
+  "version": "v1.0.1",
   "developer": "romanrmm04",
   "description": "Bot con menú para teléfonos",
   "dependencies": [],
