@@ -5,11 +5,9 @@
   },
   "id": "romanrmm04.phone-bot-mod",
   "name": "Phone Bot Mod",
-  "version": "v1.0.1",
+  "version": "v1.0.2",
   "developer": "romanrmm04",
   "description": "Bot con menú para teléfonos",
-  "dependencies": [],
-  "incompatibilities": [],
   "settings": {
     "bot-enabled": {
       "type": "bool",
