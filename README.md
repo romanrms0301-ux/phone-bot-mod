@@ -17,7 +17,7 @@ geode build
 
 ## Descripción
 
-Este proyecto está pensado como un prototipo de mod con la base mínima necesaria para funcionar en Geode. Actualmente carga el mod, muestra logs y lee la opción `bot-enabled` desde `mod.json`. Todavía no incluye un menú o un bot jugable dentro del juego.
+Este proyecto está pensado como un prototipo de mod con la base mínima necesaria para funcionar en Geode. Actualmente carga el mod, muestra logs y lee la opción `bot-enabled` desde `mod.json`. Todavía no incluye un menú o un bot jugable dentro del juego tampoco esta terminado.
 
 Objetivo: Android de 32 bits y 64 bits.
 
