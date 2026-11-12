@@ -9,7 +9,7 @@ else()
 endif()
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
-project(PhoneBot VERSION 1.0.0)
+project(PhoneBot VERSION 1.0.1)
 
 # Android NDK / Clang can choke on fmt's consteval FMT_STRING implementation
 # in some Geode dependency versions. Disable the compile-time format-string mode
