@@ -4,6 +4,13 @@ on:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     name: ${{ matrix.config.name }}
@@ -19,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Build Geode Mod
         uses: geode-sdk/build-geode-mod@main
@@ -27,10 +34,11 @@ jobs:
         with:
           target: ${{ matrix.config.target }}
           combine: true
+          sdk: given
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: geode-mod-${{ matrix.config.target }}
           path: ${{ steps.build.outputs.build-output }}
-          
+          retention-days: 14
