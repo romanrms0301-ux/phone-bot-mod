@@ -1,11 +1,12 @@
 # Phone Bot
 
-Mod de Geode para la gama Realme C61 con un bot configurable desde la interfaz del juego.
+Mod de Geode para teléfonos (probado en la gama Realme C61) con un bot configurable desde la configuración del mod.
 
 ## Requisitos
 
-- Geode SDK
-- Geode CLI
+- Geode SDK v6.0.0-alpha.1
+- Geode CLI 4.0.0 o superior
+- Geometry Dash 2.2091 en Android
 - CMake 3.21 o superior
 
 ## Compilar
@@ -16,7 +17,9 @@ geode build
 
 ## Descripción
 
-Este proyecto está pensado como un prototipo de mod con la base mínima necesaria para funcionar en Geode. Actualmente carga el mod y lee la opción `bot-enabled` desde `mod.json`.
+Este proyecto está pensado como un prototipo de mod con la base mínima necesaria para funcionar en Geode. Actualmente carga el mod, muestra logs y lee la opción `bot-enabled` desde `mod.json`. Todavía no incluye un menú o un bot jugable dentro del juego.
+
+Objetivo: Android de 32 bits y 64 bits.
 
 ## Recursos
 
