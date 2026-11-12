@@ -1,6 +1,6 @@
 # Phone Bot
 
-Mod de Geode para teléfonos (probado en la gama Realme C61) con un bot configurable desde la configuración del mod.
+Mod hecho para Geode en Android de 32 y 64 bits usando Geode v6.0.0-alpha.1 y Geometry Dash 2.2091
 
 ## Requisitos
 
