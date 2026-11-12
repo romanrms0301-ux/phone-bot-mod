@@ -8,7 +8,7 @@ bool BotController::isEnabled() {
         return false;
     }
 
-    return mod->getSettingValue<bool>("bot-enabled", false);
+    return mod->getSettingValue<bool>("bot-enabled");
 }
 
 void BotController::setEnabled(bool enabled) {
